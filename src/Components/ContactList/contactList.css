@@ -1,0 +1,19 @@
+.contact-bar{
+  background-color: rgb(54, 56, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 3px 20px 0 10px;
+  border-radius: 20px;
+}
+
+.contact-name{
+    text-decoration: none;
+    text-shadow: 2px 2px rgb(0, 132, 255);
+    color: white;
+}
+
+.contact-profile{
+  margin: 4px;
+}
