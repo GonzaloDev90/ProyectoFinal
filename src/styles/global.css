@@ -118,11 +118,8 @@ body {
 .message-screen {
     display: flex;
     height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
 }
+
 
 .message-screen__messages-container {
     flex: 1;
@@ -132,6 +129,7 @@ body {
     overflow: hidden;
     width: 200vh;
 }
+
 
 .messages-list {
     flex: 1;
@@ -230,8 +228,19 @@ input {
 
 
 
-@media (max-width: 750px) {
+
+
+
+@media (max-width: 767px) {
+    .message-screen__contact-list-container {
+        display: none;
+    }
+
     .contact-none {
         display: none;
+    }
+
+    .message-screen__messages-container {
+        width: 100%;
     }
 }

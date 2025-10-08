@@ -5,8 +5,6 @@ import { ContactListContext } from '../../Context/ContactListContext'
 const ContactList = () => {
     const { contactList, isContactListLoading } = useContext(ContactListContext)
     const [searchTerm, setSearchTerm] = useState('')
-
-    // Filtrar contactos según el término de búsqueda
     const filteredContacts = contactList.filter(contact =>
         contact.name.toLowerCase().includes(searchTerm.toLowerCase())
     )

@@ -9,7 +9,7 @@ const HomeScreen = () => {
             <ContactList/>
         </div>
         <div className='contact-none'>
-            <span>Aun no has seleccionado ningun contacto</span>
+            <span>Aun no has seleccionado algun contacto</span>
         </div>
     </div>
   )
