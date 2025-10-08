@@ -4,7 +4,6 @@ import Message from '../Message/Message';
 const MessagesList = ({ messages }) => {
   const messagesEndRef = useRef(null);
 
-  // Función para hacer scroll al final
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -24,7 +23,6 @@ const MessagesList = ({ messages }) => {
           id={msg.id}
         />
       ))}
-      {}
       <div ref={messagesEndRef} />
     </div>
   );
