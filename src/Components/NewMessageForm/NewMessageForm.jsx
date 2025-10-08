@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { ContactListContext } from '../../Context/ContactListContext'
-import './newMessageForm.css'
 
 const NewMessageForm = (props) => {
     console.log(useContext(ContactListContext))

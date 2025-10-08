@@ -32,7 +32,7 @@ const ContactItem = (props) => {
             <div className='contact-bar'>
                 <img src={contact.profile_img} className='contact-profile' />
                 <h2 className='contact-name'>{contact.name}</h2>
-                <span className='contact-status'>En linea: {contact.is_connected ? 'Online' : 'Offline'}</span>
+                <span className='contact-status'>{contact.is_connected ? 'Online' : 'Offline'}</span>
                 <br />
             </div>
         </Link>

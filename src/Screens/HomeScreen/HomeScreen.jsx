@@ -4,11 +4,11 @@ import ContactList from '../../Components/ContactList/ContactList'
 
 const HomeScreen = () => {
   return (
-    <div>
+    <div className='contact-container'>
         <div className='contact-list'>
             <ContactList/>
         </div>
-        <div>
+        <div className='contact-none'>
             <span>Aun no has seleccionado ningun contacto</span>
         </div>
     </div>

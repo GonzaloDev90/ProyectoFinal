@@ -1,5 +1,5 @@
 .contact-bar{
-  background-color: rgb(54, 56, 53);
+  background-color: rgb(82, 83, 81);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,11 +9,6 @@
 }
 
 .contact-name{
-    text-decoration: none;
     text-shadow: 2px 2px rgb(0, 132, 255);
     color: white;
-}
-
-.contact-profile{
-  margin: 4px;
 }

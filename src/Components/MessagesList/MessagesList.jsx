@@ -1,6 +1,5 @@
 import React from 'react'
 import Message from '../Message/Message'
-import './messagesList.css'
 
 const MessagesList = (props) => {
 
@@ -8,7 +7,6 @@ const MessagesList = (props) => {
   const messages_list_JSX = props.messages.map(
     (message) => {
       return (
-        
         <Message
           key={message.id}
           author={message.author}

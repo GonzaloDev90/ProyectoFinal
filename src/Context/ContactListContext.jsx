@@ -2,7 +2,6 @@ import { createContext, useEffect, useState } from "react";
 import { getAllContacts } from "../services/contactService";
 
 
-//Creamos el contexto
 export const ContactListContext = createContext(
     {
         contactList: [],
@@ -10,7 +9,6 @@ export const ContactListContext = createContext(
     }
 )
 
-//Crear el proveedor de contexto
 const ContactListContextProvider = (props) => {
     const [contactList, setContactList] = useState([])
     const [isContactListLoading, setIsContactListLoading] = useState(false)
@@ -24,7 +22,7 @@ const ContactListContextProvider = (props) => {
                 setContactList(contact_list_response)
                 setIsContactListLoading(false)
             },
-            2000
+            500
         )
     } 
 
