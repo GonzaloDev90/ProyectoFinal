@@ -25,15 +25,28 @@ body {
     flex-direction: column;
 }
 
-.contact-container{
+.contact-container {
     display: flex;
     align-items: center;
 }
 
-.contact-none{
+.contact-none {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.contact-bar-info-contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-bar-info-img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
 }
 
 .contact-bar-info {
@@ -48,11 +61,20 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.contact-bar-info-button button{
+.contact-bar-info-button button {
     background-color: #075e54;
     border: none;
     color: white;
     font-size: 15px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
 }
 
 .contact-bar {
@@ -67,7 +89,7 @@ body {
     transition: background-color 0.2s;
 }
 
-.no-underline{
+.no-underline {
     text-decoration: none;
 }
 
@@ -112,13 +134,14 @@ body {
 }
 
 .messages-list {
-    flex: 1; 
+    flex: 1;
     padding: 15px;
-    overflow-y: auto; 
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .message-container {
     margin-bottom: 10px;
     position: relative;
@@ -202,9 +225,8 @@ body {
 
 
 
-
-
-
-
-
-
+@media (max-width: 750px) {
+    .contact-none {
+        display: none;
+    }
+}

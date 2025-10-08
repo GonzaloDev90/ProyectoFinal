@@ -1,44 +1,37 @@
 import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import MessagesList from '../../Components/MessagesList/MessagesList'
 import NewMessageForm from '../../Components/NewMessageForm/NewMessageForm'
-import ContactList from '../../Components/ContactList/ContactList'
 import { ContactDetailContext } from '../../Context/ContactDetailContext'
 
 function MessageScreen() {
-
-
     const { isContactDetailLoading, contactDetailed, onCreateNewMessage } = useContext(ContactDetailContext)
+    const navigate = useNavigate()
 
+    const handleBackToList = () => {
+        navigate('/') // Ruta donde está la lista de contactos
+    }
 
     return (
         <div className='message-screen'>
-            <div className='message-screen__contact-list-container'>
-                <ContactList />
-            </div>
-
             <div className='message-screen__messages-container'>
                 <div className='contact-bar-info'>
-                    <div className='contact-bar-info-button'><button>{"Atras"}</button></div>
-                    <div className='contact-bar-info-contact'></div>
+                    <button onClick={handleBackToList} className='back-button'>←</button>
+                    <div className='contact-bar-info-contact'>{contactDetailed?.name}</div>
                 </div>
-                {
-                    isContactDetailLoading
-                        ? <span>cargando...</span>
-                        : (
-                            contactDetailed
-                                ? <MessagesList
-                                    messages={contactDetailed.messages}
-                                />
-                                : <span>contacto no encontrado</span>
-                        )
-                }
 
-
-                <div className='messages-form-container'>
-                    <NewMessageForm
-                        onCreateNewMessage={onCreateNewMessage}
-                    />
-                </div>
+                {isContactDetailLoading ? (
+                    <span>cargando...</span>
+                ) : contactDetailed ? (
+                    <>
+                        <MessagesList messages={contactDetailed.messages} />
+                        <div className='messages-form-container'>
+                            <NewMessageForm onCreateNewMessage={onCreateNewMessage} />
+                        </div>
+                    </>
+                ) : (
+                    <span>contacto no encontrado</span>
+                )}
             </div>
         </div>
     )
