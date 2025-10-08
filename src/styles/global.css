@@ -2,7 +2,8 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #e5ddd5;
-    width: 15%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .app-container {
@@ -26,6 +27,13 @@ body {
 
 .contact-container{
     display: flex;
+    align-items: center;
+}
+
+.contact-none{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .contact-bar-info {
@@ -38,6 +46,13 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.contact-bar-info-button button{
+    background-color: #075e54;
+    border: none;
+    color: white;
+    font-size: 15px;
 }
 
 .contact-bar {
@@ -97,14 +112,13 @@ body {
 }
 
 .messages-list {
-    flex: 1;
+    flex: 1; 
     padding: 15px;
-    overflow-y: auto;
+    overflow-y: auto; 
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 .message-container {
     margin-bottom: 10px;
     position: relative;

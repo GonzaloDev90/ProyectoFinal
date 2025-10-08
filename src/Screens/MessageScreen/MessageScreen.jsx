@@ -18,7 +18,7 @@ function MessageScreen() {
 
             <div className='message-screen__messages-container'>
                 <div className='contact-bar-info'>
-                    <div className='contact-bar-info-button'><button>{"<-"}</button></div>
+                    <div className='contact-bar-info-button'><button>{"Atras"}</button></div>
                     <div className='contact-bar-info-contact'></div>
                 </div>
                 {
