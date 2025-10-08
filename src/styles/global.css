@@ -184,17 +184,6 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .contact-bar {
-        display: none;
-    }
-
-    .contact-container{
-        display: flex;
-    }
-}
-
-
 
 
 
